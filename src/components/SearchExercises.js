@@ -5,7 +5,6 @@ import HorizontalScrollBar from '../components/HorizontalScrollBar'
 
 const SearchExercises = ({ setExercises, setBodyPart, bodyPart }) => {
   const [search, setSearch] = useState()
-  // eslint-disable-next-line no-unused-vars
   const [bodyParts, setBodyParts] = useState([])
 
   useEffect(() => {

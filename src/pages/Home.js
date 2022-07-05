@@ -7,7 +7,6 @@ import Exercises from '../components/Exercises'
 
 const Home = () => {
   const [bodyPart, setBodyPart] = useState('all')
-  // eslint-disable-next-line no-unused-vars
   const [exercises, setExercises] = useState([])
 
   return (
@@ -19,6 +18,7 @@ const Home = () => {
         bodyPart={bodyPart}
       />
       <Exercises
+        exercises={exercises}
         setExercises={setExercises}
         setBodyPart={setBodyPart}
         bodyPart={bodyPart}
