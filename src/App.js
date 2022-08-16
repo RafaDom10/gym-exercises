@@ -1,15 +1,21 @@
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
 import { Box } from '@mui/material'
-import Routes from './Routes'
-import './App.css'
 
-import NavBar from './components/NavBar'
+import './App.css'
+import ExerciseDetail from './pages/ExerciseDetail'
+import Home from './pages/Home'
+import Navbar from './components/NavBar'
 import Footer from './components/Footer'
 
 const App = () => {
   return (
     <Box width='400px' sx={{ width: { xl: '1488px' } }} m='auto'>
-      <NavBar />
-      <Routes />
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/exercise/:id' element={<ExerciseDetail />} />
+      </Routes>
       <Footer />
     </Box>
   )
