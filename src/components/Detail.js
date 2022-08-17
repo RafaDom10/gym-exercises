@@ -34,8 +34,8 @@ const Detail = ({ exerciseDetail }) => {
           is one f the best exercises to target your {target}.
           It will help you improve your mood and gain energy.
         </Typography>
-        {extraDetail.map((item) => (
-          <Stack key={item.name} direaction='row' gap='24px' alignItems='center'>
+        {extraDetail.map((item, idx) => (
+          <Stack key={idx} direction='row' gap='24px' alignItems='center'>
             <Button sx={{ background: '#FFF2DB', borderRadius: '50%', width: '100px', height: '100px' }}>
               <img src={item.icon} alt={bodyPart} sx={{ width: '50px', height: '50px' }} />
             </Button>

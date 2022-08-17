@@ -18,10 +18,10 @@ const ExerciseDetail = () => {
       const youtubeSearchUrl = 'https://youtube-search-and-download.p.rapidapi.com'
 
       const exerciseDetailData = await fetchData(`${exerciseDbUrl}/exercises/exercise/${id}`)
-      const exerciseVideosData = await fetchDataYoutube(`${youtubeSearchUrl}/search?q=${exerciseDetailData.name}`)
+      const exerciseVideosData = await fetchDataYoutube(`${youtubeSearchUrl}/search?query=${exerciseDetailData.name} exercise`)
 
       setExerciseDetail(exerciseDetailData)
-      setExercisesVideos(exerciseVideosData)
+      setExercisesVideos(exerciseVideosData.contents)
     }
 
     fetchExerciseData()
